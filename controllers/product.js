@@ -30,7 +30,7 @@ const allProducts = async (_, res) => {
     try {        
         const allProducts = await Product.find({})
         if (allProducts.length === 0 ) {
-            res.status(404).json({success: false, message: 'No products found'})
+            res.status(404).json({success: false, message: 'No product found'})
         } else {
             res.status(200).json(allProducts)
         }
